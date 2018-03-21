@@ -342,11 +342,13 @@ AthleteConfig::AthleteConfig(QDir home, Context *context) :
     mainLayout->setContentsMargins(0,0,0,0);
 
     QTabWidget *zonesTab = new QTabWidget(this);
+    zonesTab->setFont(baseFont);
     zonesTab->addTab(zonePage, tr("Power Zones"));
     zonesTab->addTab(hrZonePage, tr("Heartrate Zones"));
     zonesTab->addTab(paceZonePage, tr("Pace Zones"));
 
     QTabWidget *tabs = new QTabWidget(this);
+    tabs->setFont(baseFont);
     tabs->addTab(athletePage, tr("About"));
     tabs->addTab(modelPage, tr("Model"));
     tabs->addTab(athletePhysPage, tr("Measurements"));
@@ -427,6 +429,7 @@ MetricConfig::MetricConfig(QDir home, Context *context) :
     mainLayout->setContentsMargins(0,0,0,0);
 
     QTabWidget *tabs = new QTabWidget(this);
+    tabs->setFont(baseFont);
     tabs->addTab(customPage, tr("Custom"));
     tabs->addTab(bestsPage, tr("Bests"));
     tabs->addTab(summaryPage, tr("Summary"));
@@ -486,6 +489,7 @@ TrainConfig::TrainConfig(QDir home, Context *context) :
     mainLayout->setContentsMargins(0,0,0,0);
 
     QTabWidget *tabs = new QTabWidget(this);
+    tabs->setFont(baseFont);
     tabs->addTab(devicePage, tr("Train Devices"));
     tabs->addTab(optionsPage, tr("Preferences"));
     tabs->addTab(remotePage, tr("Remote Controls"));

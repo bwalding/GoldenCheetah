@@ -2321,6 +2321,7 @@ ColorsPage::ColorsPage(QWidget *parent) : QWidget(parent)
     mainLayout->addLayout(grid);
 
     colorTab = new QTabWidget(this);
+    colorTab->setFont(baseFont);
     colorTab->addTab(themes, tr("Theme"));
     colorTab->addTab(colors, tr("Colors"));
     colorTab->setCornerWidget(applyTheme);
@@ -3334,6 +3335,7 @@ MetadataPage::MetadataPage(Context *context) : context(context)
 
 
     tabs = new QTabWidget(this);
+    tabs->setFont(baseFont);
     tabs->addTab(fieldsPage, tr("Fields"));
     tabs->addTab(keywordsPage, tr("Notes Keywords"));
     tabs->addTab(defaultsPage, tr("Defaults"));
@@ -4103,6 +4105,7 @@ ZonePage::ZonePage(Context *context) : context(context)
     layout->addLayout(hlayout);
     connect(sportCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(changeSport(int)));
     tabs = new QTabWidget(this);
+    tabs->setFont(baseFont);
     layout->addWidget(tabs);
 
     for (int i=0; i < nSports; i++) {
@@ -4930,6 +4933,7 @@ HrZonePage::HrZonePage(Context *context) : context(context)
     layout->addLayout(hlayout);
     connect(sportCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(changeSport(int)));
     tabs = new QTabWidget(this);
+    tabs->setFont(baseFont);
     layout->addWidget(tabs);
 
     for (int i=0; i < nSports; i++) {
@@ -5674,6 +5678,7 @@ PaceZonePage::PaceZonePage(Context *context) : context(context)
     layout->addLayout(hlayout);
     connect(sportCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(changeSport(int)));
     tabs = new QTabWidget(this);
+    tabs->setFont(baseFont);
     layout->addWidget(tabs);
 
     for (int i=0; i < nSports; i++) {

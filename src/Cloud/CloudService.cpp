@@ -722,6 +722,7 @@ CloudServiceSyncDialog::CloudServiceSyncDialog(Context *context, CloudService *s
     QWidget * upload = new QWidget(this);
     QWidget * download = new QWidget(this);
     QWidget * sync = new QWidget(this);
+    tabs->setFont(baseFont);
     tabs->addTab(download, tr("Download"));
     tabs->addTab(upload, tr("Upload"));
     tabs->addTab(sync, tr("Synchronize"));
@@ -738,6 +739,7 @@ CloudServiceSyncDialog::CloudServiceSyncDialog(Context *context, CloudService *s
     athleteCombo = new QComboBox(this);
     athleteCombo->addItem(context->athlete->cyclist);
     athleteCombo->setCurrentIndex(0);
+    athleteCombo->setItemData(0, Qt::AlignCenter, Qt::TextAlignmentRole);
 
     QLabel *fromLabel = new QLabel(tr("From:"), this);
     QLabel *toLabel = new QLabel(tr("To:"), this);

@@ -19,6 +19,7 @@
 #include "AboutDialog.h"
 #include "GcUpgrade.h"
 #include "GcCrashDialog.h"
+#include "Colors.h"
 
 AboutDialog::AboutDialog(Context *context) : context(context)
 {
@@ -29,6 +30,7 @@ AboutDialog::AboutDialog(Context *context) : context(context)
     contributorsPage = new ContributorsPage(context);
 
     tabWidget = new QTabWidget;
+    tabWidget->setFont(baseFont);
     tabWidget->setContentsMargins(0,0,0,0);
     tabWidget->addTab(aboutPage, tr("About"));
     tabWidget->addTab(versionPage, tr("Version"));

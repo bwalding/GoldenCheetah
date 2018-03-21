@@ -60,6 +60,7 @@ RideMetadata::RideMetadata(Context *context, bool singlecolumn) :
 
     // setup the tabs widget
     tabs = new QTabWidget(this);
+    tabs->setFont(baseFont);
     tabs->setMovable(true);
 
     // better styling on Linux with fusion controls
