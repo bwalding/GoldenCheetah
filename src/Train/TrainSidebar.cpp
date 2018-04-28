@@ -1527,7 +1527,7 @@ void TrainSidebar::guiUpdate()           // refreshes the telemetry
         
         CFStringRef reasonForActivity = CFSTR("TrainSidebar::guiUpdate");
         IOPMAssertionID assertionID;
-        IOReturn suspendSreensaverSuccess = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoDisplaySleep, kIOPMAssertionLevelOn, reasonForActivity, &assertionID);
+        IOReturn suspendScreensaverSuccess = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoDisplaySleep, kIOPMAssertionLevelOn, reasonForActivity, &assertionID);
 #endif
         
         if(calibrating) {
@@ -1800,10 +1800,10 @@ void TrainSidebar::guiUpdate()           // refreshes the telemetry
         }
         
 #ifdef Q_OS_MAC
-        if (suspendSreensaverSuccess == kIOReturnSuccess)
+        if (suspendScreensaverSuccess == kIOReturnSuccess)
         {
             // Re-enable screen saver
-            suspendSreensaverSuccess = IOPMAssertionRelease(assertionID);
+            suspendScreensaverSuccess = IOPMAssertionRelease(assertionID);
             //The system will be able to sleep again.
         }
 #endif
